@@ -58,7 +58,7 @@
             I've been working as a full stack developer for the last 3 years.
             Before that I was a chemist who dreamt of developing software
             professionally. Coding makes me feel like a wizard, and my 5 year
-            plan is to become Gandalf. The beard might take a few extra years.
+            plan is to become Gandalf. The beard might take a little longer.
           </p>
           <p class="portfolio__section-paragraph">
             When I'm not writing code I'm gaming, reading, struggling to ride a
