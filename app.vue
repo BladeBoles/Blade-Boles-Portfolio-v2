@@ -37,34 +37,51 @@
         I'm <span class="portfolio__name-span">Blade</span>.
       </h2>
       <p>I like full stack TypeScript development.</p>
-      <button class="portfolio__work-button">View Work</button>
+      <button class="portfolio__work-button">
+        <a class="portfolio__work-button-anchor" href="#portfolio__projects"
+          >View Work</a
+        >
+      </button>
     </section>
     <section class="portfolio__section" id="portfolio__bio">
       <h2 class="portfolio__section-header">About Me</h2>
-      <p>
-        I've been working as a full stack developer for the last 3 years. Before
-        that I was a chemist who dreamt of developing software. Coding makes me
-        feel like a wizard, and my 5 year plan revolves around becoming Gandalf.
-        The beard might take a little longer.
-      </p>
-      <p>
-        When I'm not writing code I'm gaming, reading, struggling to ride a
-        snowboard or adventuring with my partner and our Shiba Inu. I believe
-        that a sense of humor and a sense of purpose are two of the most
-        important things a person can have in life.
-      </p>
+      <div class="portfolio__section-bio">
+        <div class="portfolio__section-bio-left">
+          <img
+            src="./assets/headshot.jpg"
+            alt="A picture of Blade"
+            class="portfolio__bio-headshot"
+          />
+        </div>
+        <div class="portfolio__section-bio-right">
+          <p class="portfolio__section-paragraph">
+            I've been working as a full stack developer for the last 3 years.
+            Before that I was a chemist who dreamt of developing software.
+            Coding makes me feel like a wizard, and my 5 year plan is to become
+            Gandalf. The beard might take a few extra years.
+          </p>
+          <p class="portfolio__section-paragraph">
+            When I'm not writing code I'm gaming, reading, struggling to ride a
+            snowboard or adventuring with my partner and our Shiba Inu. I
+            believe that the two most important things for a person to have are
+            a sense of humor and a sense of purpose.
+          </p>
+        </div>
+      </div>
     </section>
     <section class="portfolio__section" id="portfolio__projects">
       <h2 class="portfolio__section-header">Completed Projects:</h2>
-      <p>
+      <p class="portfolio__section-paragraph">
         I removed all of my old portfolio projects because they no longer
         reflect my skill level. Over the last couple of months I've been working
         on some really fun projects after work. Be sure to check back in the
         near future to see what I've been up to.
       </p>
-      <p>
-        Feel free to <button>Contact Me</button> to hear about my professional
-        experience or the side projects I've been working on.
+      <p class="portfolio__section-paragraph">
+        Feel free to
+        <button class="portfolio__work-button-anchor">Contact Me</button> to
+        hear about my professional experience or the side projects I've been
+        working on.
       </p>
     </section>
     <footer class="portfolio__section" id="portfolio__contact">
@@ -157,9 +174,43 @@ h1 {
 }
 
 .portfolio__work-button {
+  font-size: 22px;
   color: inherit;
   background-color: inherit;
-  border: 3px solid #d1462f;
+  border: 3px solid #355834;
   padding: 10px 20px;
+}
+
+.portfolio__work-button-anchor {
+  font-size: inherit;
+  color: inherit;
+  background-color: inherit;
+  font-style: none;
+  text-decoration: none;
+}
+.portfolio__work-button-anchor:hover {
+  color: inherit;
+  text-decoration: 3px solid #355834 underline;
+}
+
+.portfolio__section-paragraph {
+  max-width: 600px;
+  line-height: 150%;
+}
+
+.portfolio__section-bio {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio__section-bio-right {
+  align-self: flex-start;
+}
+
+.portfolio__bio-headshot {
+  max-width: 350px;
+  margin-right: 10vw;
 }
 </style>
