@@ -36,7 +36,7 @@
       <h2 class="portfolio__name-header">
         I'm <span class="portfolio__name-span">Blade</span>.
       </h2>
-      <p>I like full stack TypeScript development.</p>
+      <p>I like full stack development. I really like TypeScript.</p>
       <button class="portfolio__work-button">
         <a class="portfolio__work-button-anchor" href="#portfolio__projects"
           >View Work</a
@@ -56,9 +56,9 @@
         <div class="portfolio__section-bio-right">
           <p class="portfolio__section-paragraph">
             I've been working as a full stack developer for the last 3 years.
-            Before that I was a chemist who dreamt of developing software.
-            Coding makes me feel like a wizard, and my 5 year plan is to become
-            Gandalf. The beard might take a few extra years.
+            Before that I was a chemist who dreamt of developing software
+            professionally. Coding makes me feel like a wizard, and my 5 year
+            plan is to become Gandalf. The beard might take a few extra years.
           </p>
           <p class="portfolio__section-paragraph">
             When I'm not writing code I'm gaming, reading, struggling to ride a
