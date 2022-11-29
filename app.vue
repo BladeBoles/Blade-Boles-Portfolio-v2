@@ -36,7 +36,7 @@
       <h2 class="portfolio__name-header">
         I'm <span class="portfolio__name-span">Blade</span>.
       </h2>
-      <p>I like full stack development. I really like TypeScript.</p>
+      <p>I'm a full stack developer. I really like TypeScript.</p>
       <button class="portfolio__work-button">
         <a class="portfolio__work-button-anchor" href="#portfolio__projects"
           >View Work</a
@@ -62,7 +62,7 @@
           </p>
           <p class="portfolio__section-paragraph">
             When I'm not writing code I'm gaming, reading, struggling to ride a
-            snowboard or adventuring with my partner and our Shiba Inu. I
+            snowboard, or adventuring with my partner and our Shiba Inu. I
             believe that the two most important things for a person to have are
             a sense of humor and a sense of purpose.
           </p>
@@ -70,25 +70,54 @@
       </div>
     </section>
     <section class="portfolio__section" id="portfolio__projects">
-      <h2 class="portfolio__section-header">Completed Projects:</h2>
-      <p class="portfolio__section-paragraph">
-        I removed all of my old portfolio projects because they no longer
-        reflect my skill level. Over the last couple of months I've been working
-        on some really fun projects after work. Be sure to check back in the
-        near future to see what I've been up to.
-      </p>
-      <p class="portfolio__section-paragraph">
-        Feel free to
-        <button class="portfolio__work-button-anchor">Contact Me</button> to
-        hear about my professional experience or the side projects I've been
-        working on.
-      </p>
+      <h2 class="portfolio__section-header">Completed Projects</h2>
+      <div class="portfolio__section-projects">
+        <p class="portfolio__section-paragraph">
+          I removed all of my old portfolio projects because they no longer
+          reflect my skill level.
+          <a
+            href="https://app.pivotinteractives.com/activities"
+            class="portfolio__work-preview"
+            >Click here</a
+          >
+          if you'd like a peak at the work project I've been on for the last 2
+          years. Check back in the near future to see what I've been working on
+          in my spare time.
+        </p>
+        <p class="portfolio__section-paragraph">
+          Feel free to contact me to hear more about my professional experience
+          or the side projects I've got going that aren't ready to release yet.
+        </p>
+      </div>
     </section>
     <footer class="portfolio__section" id="portfolio__contact">
-      <ul>
-        <li>Email</li>
-        <li>Phone</li>
-        <li>LinkedIn</li>
+      <ul class="portfolio__footer">
+        <li class="portfolio__footer--email">
+          <span class="portfolio__footer--email-span">Email: </span>
+          <a
+            class="portfolio__footer--email-link"
+            href="mailto:bladerboles@gmail.com"
+            >bladerboles@gmail.com</a
+          >
+        </li>
+        <li class="portfolio__footer--socials">
+          <p>
+            <a href="#"
+              ><img
+                class="portfolio__footer--gh-image"
+                src="./assets/GitHub-Mark-Light-64px.png"
+                alt=""
+            /></a>
+          </p>
+          <p>
+            <a href="#"
+              ><img
+                class="portfolio__footer--li-image"
+                src="./assets/LI-In-Bug.png"
+                alt=""
+            /></a>
+          </p>
+        </li>
       </ul>
     </footer>
   </main>
@@ -120,7 +149,7 @@ h1 {
 .portfolio__navbar {
   position: fixed;
   top: 0;
-  height: 15vh;
+  height: 100px;
   width: 100vw;
   text-align: center;
   vertical-align: middle;
@@ -150,7 +179,8 @@ h1 {
 }
 
 .portfolio__navlist-anchor:hover {
-  color: #d1462f;
+  color: inherit;
+  text-decoration: 2px #d1462f underline;
 }
 
 .portfolio__section--greeting {
@@ -212,5 +242,49 @@ h1 {
 .portfolio__bio-headshot {
   max-width: 350px;
   margin-right: 10vw;
+}
+
+.portfolio__section-projects {
+  margin-top: 50px;
+}
+.portfolio__work-preview {
+  color: inherit;
+}
+.portfolio__work-preview:hover {
+  color: #d1462f;
+  text-decoration: 2px #d1462f underline;
+}
+.portfolio__footer {
+  width: 80%;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  justify-content: space-between;
+}
+
+.portfolio__footer--email-span {
+  color: #d1462f;
+}
+
+.portfolio__footer--email-link {
+  color: inherit;
+  text-decoration: 2px #e3dbdb underline;
+}
+
+.portfolio__footer--email-link:hover {
+  color: inherit;
+}
+
+.portfolio__footer--socials {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.portfolio__footer--gh-image,
+.portfolio__footer--li-image {
+  width: 64px;
 }
 </style>
