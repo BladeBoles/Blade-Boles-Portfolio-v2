@@ -1,17 +1,38 @@
 <template>
-  <nav class="portfolio__navbar">
-    <!-- <a class="navbar-brand" href="#">BB</a>
-    <button
-      aria-label="Toggle navigation"
-    >
-      <span>Toggle Icon</span>
-    </button> -->
-    <ul class="portfolio__navlist">
+  <a class="portfolio__navbar-brand" href="#">BB</a>
+  <button
+    @click="toggleNav"
+    class="portfolio__nav-toggle"
+    aria-label="Toggle navigation"
+  >
+    <span>Toggle Icon</span>
+  </button>
+  <nav v-if="navOpen" class="portfolio__navbar">
+    <ul class="portfolio__navlist--dropdown">
       <li class="portfolio__navlist-item">
+        <a class="portfolio__navlist-anchor" href="#portfolio__bio">About</a>
+      </li>
+      <li class="portfolio__navlist-item">
+        <a
+          ctoggleNavlass="portfolio__navlist-anchor"
+          href="#portfolio__projects"
+          >Projects</a
+        >
+      </li>
+      <li class="portfolio__navlist-item">
+        <a class="portfolio__navlist-anchor" href="#portfolio__contact"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <nav v-else class="portfolio__navbar">
+    <ul class="portfolio__navlist">
+      <!-- <li class="portfolio__navlist-item">
         <a class="portfolio__navlist-anchor" href="#portfolio__greeting"
           >Home</a
         >
-      </li>
+      </li> -->
       <li class="portfolio__navlist-item">
         <a class="portfolio__navlist-anchor" href="#portfolio__bio">About</a>
       </li>
@@ -122,7 +143,13 @@
     </footer>
   </main>
 </template>
+<script setup>
+import { ref } from 'vue'
 
+const navOpen = ref(true)
+
+const toggleNav = () => (navOpen.value = !navOpen.value)
+</script>
 <style>
 body {
   background-color: #150811;
@@ -142,8 +169,26 @@ h1 {
   padding-top: 15vh;
 }
 
+.portfolio__nav-toggle {
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+}
+
 .portfolio__section-header {
   padding-top: 15vh;
+}
+
+.portfolio__navlist--dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__navbar-brand {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  color: inherit;
 }
 
 .portfolio__navbar {
