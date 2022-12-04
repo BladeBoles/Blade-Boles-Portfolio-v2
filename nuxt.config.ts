@@ -6,4 +6,13 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
   },
+  build: {
+    transpile: [
+      '@fortawesome/vue-fontawesome',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/pro-solid-svg-icons',
+      '@fortawesome/pro-regular-svg-icons',
+      '@fortawesome/free-brands-svg-icons'
+    ]
+  }
 })

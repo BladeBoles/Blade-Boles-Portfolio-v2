@@ -1,14 +1,21 @@
 <template>
   <a class="portfolio__navbar-brand" href="#">BB</a>
+
   <button
     @click="toggleNav"
     class="portfolio__nav-toggle"
     aria-label="Toggle navigation"
   >
-    <span>Toggle Icon</span>
+    <i class="fa-solid fa-check"></i>
+    <span>Toggle butotn</span>
   </button>
-  <nav v-if="navOpen" class="portfolio__navbar">
+  <nav v-if="navOpen" class="portfolio__navbar--small">
     <ul class="portfolio__navlist--dropdown">
+      <li class="portfolio__navlist-item">
+        <a class="portfolio__navlist-anchor" href="#portfolio__greeting"
+          >Home</a
+        >
+      </li>
       <li class="portfolio__navlist-item">
         <a class="portfolio__navlist-anchor" href="#portfolio__bio">About</a>
       </li>
@@ -26,13 +33,8 @@
       </li>
     </ul>
   </nav>
-  <nav v-else class="portfolio__navbar">
+  <nav class="portfolio__navbar">
     <ul class="portfolio__navlist">
-      <!-- <li class="portfolio__navlist-item">
-        <a class="portfolio__navlist-anchor" href="#portfolio__greeting"
-          >Home</a
-        >
-      </li> -->
       <li class="portfolio__navlist-item">
         <a class="portfolio__navlist-anchor" href="#portfolio__bio">About</a>
       </li>
@@ -49,6 +51,7 @@
     </ul>
   </nav>
   <main class="portfolio__main">
+    <i class="fa-solid fa-c"></i>
     <section
       class="portfolio__section portfolio__section--greeting"
       id="portfolio__greeting"
@@ -72,7 +75,7 @@
             src="./assets/headshot.jpg"
             alt="A picture of Blade"
             class="portfolio__bio-headshot"
-          />
+          />z-index
         </div>
         <div class="portfolio__section-bio-right">
           <p class="portfolio__section-paragraph">
@@ -144,9 +147,12 @@
   </main>
 </template>
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const navOpen = ref(true)
+// const viewWidth = computed(() =>
+//   Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+// )
 
 const toggleNav = () => (navOpen.value = !navOpen.value)
 </script>
@@ -172,6 +178,7 @@ h1 {
 .portfolio__nav-toggle {
   position: absolute;
   top: 0;
+  right: 0;
   z-index: 10000;
 }
 
@@ -187,11 +194,12 @@ h1 {
 .portfolio__navbar-brand {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 10000;
   color: inherit;
 }
 
-.portfolio__navbar {
+.portfolio__navbar,
+.portfolio__navbar--small {
   position: fixed;
   top: 0;
   height: 100px;
@@ -331,5 +339,20 @@ h1 {
 .portfolio__footer--gh-image,
 .portfolio__footer--li-image {
   width: 64px;
+}
+
+@media (min-width: 700px) {
+  .portfolio__navbar--small {
+    visibility: hidden;
+  }
+  .portfolio__nav-toggle {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 699px) {
+  .portfolio__navbar {
+    visibility: hidden;
+  }
 }
 </style>
