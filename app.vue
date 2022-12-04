@@ -1,16 +1,13 @@
 <template>
-  <a class="portfolio__navbar-brand" href="#">BB</a>
-
-  <button
-    @click="toggleNav"
-    class="portfolio__nav-toggle"
-    aria-label="Toggle navigation"
-  >
-    <i class="fa-solid fa-check"></i>
-    <span>Toggle butotn</span>
-  </button>
-  <nav v-if="navOpen" class="portfolio__navbar--small">
-    <ul class="portfolio__navlist--dropdown">
+  <nav class="portfolio__navbar--small">
+    <button
+      @click="toggleNav"
+      class="portfolio__nav-toggle"
+      aria-label="Toggle navigation"
+    >
+      <fa-bars />
+    </button>
+    <ul v-if="navOpen" class="portfolio__navlist--dropdown">
       <li class="portfolio__navlist-item">
         <a class="portfolio__navlist-anchor" href="#portfolio__greeting"
           >Home</a
@@ -20,9 +17,7 @@
         <a class="portfolio__navlist-anchor" href="#portfolio__bio">About</a>
       </li>
       <li class="portfolio__navlist-item">
-        <a
-          ctoggleNavlass="portfolio__navlist-anchor"
-          href="#portfolio__projects"
+        <a class="portfolio__navlist-anchor" href="#portfolio__projects"
           >Projects</a
         >
       </li>
@@ -35,6 +30,9 @@
   </nav>
   <nav class="portfolio__navbar">
     <ul class="portfolio__navlist">
+      <li class="portfolio__navlist-item">
+        <a class="portfolio__navlist-anchor" href="#">Home</a>
+      </li>
       <li class="portfolio__navlist-item">
         <a class="portfolio__navlist-anchor" href="#portfolio__bio">About</a>
       </li>
@@ -75,7 +73,7 @@
             src="./assets/headshot.jpg"
             alt="A picture of Blade"
             class="portfolio__bio-headshot"
-          />z-index
+          />
         </div>
         <div class="portfolio__section-bio-right">
           <p class="portfolio__section-paragraph">
@@ -147,12 +145,10 @@
   </main>
 </template>
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
+import FaBars from '~icons/fa6-solid/bars'
 
-const navOpen = ref(true)
-// const viewWidth = computed(() =>
-//   Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-// )
+const navOpen = ref(false)
 
 const toggleNav = () => (navOpen.value = !navOpen.value)
 </script>
@@ -180,6 +176,11 @@ h1 {
   top: 0;
   right: 0;
   z-index: 10000;
+  background-color: inherit;
+  color: inherit;
+  font-size: 36px;
+  border: none;
+  margin-right: 10px;
 }
 
 .portfolio__section-header {
@@ -189,13 +190,14 @@ h1 {
 .portfolio__navlist--dropdown {
   display: flex;
   flex-direction: column;
-}
-
-.portfolio__navbar-brand {
   position: fixed;
   top: 0;
+  right: 0;
+  margin-top: 64px;
+  margin-right: 10px;
   z-index: 10000;
-  color: inherit;
+  background-color: #150811;
+  padding: 0;
 }
 
 .portfolio__navbar,
@@ -284,7 +286,6 @@ h1 {
 .portfolio__section-bio {
   margin-top: 50px;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -299,6 +300,7 @@ h1 {
 
 .portfolio__section-projects {
   margin-top: 50px;
+  max-width: 90vw;
 }
 .portfolio__work-preview {
   color: inherit;
@@ -353,6 +355,17 @@ h1 {
 @media (max-width: 699px) {
   .portfolio__navbar {
     visibility: hidden;
+  }
+  .portfolio__section-bio {
+    flex-direction: column;
+  }
+  .portfolio__section-bio-right {
+    align-self: center;
+    margin-top: 15px;
+    max-width: 90vw;
+  }
+  .portfolio__bio-headshot {
+    margin-right: 0;
   }
 }
 </style>

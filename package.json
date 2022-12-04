@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@iconify/json": "^2.1.147",
     "@nuxtjs/google-fonts": "^2.0.0",
     "bootstrap": "^5.2.3",
-    "bootstrap-vue": "^2.23.1"
+    "bootstrap-vue": "^2.23.1",
+    "unplugin-icons": "^0.14.14"
   }
 }
