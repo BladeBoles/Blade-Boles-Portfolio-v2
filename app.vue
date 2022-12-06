@@ -76,7 +76,7 @@
       <div class="portfolio__section-bio">
         <div class="portfolio__section-bio-left">
           <img
-            src="./assets/headshot.jpg"
+            src="./static/headshot.jpg"
             alt="A picture of Blade"
             class="portfolio__bio-headshot"
           />
@@ -133,14 +133,14 @@
           <a target="_blank" href="https://github.com/BladeBoles/"
             ><img
               class="portfolio__footer--gh-image"
-              src="./assets/GitHub-Mark-Light-64px.png"
+              src="./static/GitHub-Mark-Light-64px.png"
               alt=""
           /></a>
 
           <a target="_blank" href="https://www.linkedin.com/in/blade-boles/"
             ><img
               class="portfolio__footer--li-image"
-              src="./assets/In-White-128-Γäó@2x.png"
+              src="./static/In-White-128-Γäó@2x.png"
               alt=""
           /></a>
         </li>
