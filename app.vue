@@ -153,6 +153,7 @@ import { ref } from 'vue'
 import FaBars from '~icons/fa6-solid/bars'
 import CloseRounded from '~icons/material-symbols/close-rounded'
 useHead({
+  title: 'Blade Boles Portfolio',
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
 })
 const navOpen = ref(false)
